@@ -3,7 +3,6 @@
 /**
  * bfree - Frees a pointer and sets the address to NULL
  * @ptr: Address of the pointer to free
- *
  *This function frees the memory pointed to by the given pointer and sets the
  * pointer address to NULL.
  *
