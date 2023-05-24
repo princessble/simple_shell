@@ -20,7 +20,7 @@ int _erratoi(char *s)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			result *= 10
+			result *= 10;
 				result += (s[i] - '0');
 			if (result > INT_MAX)
 				return (-1);
@@ -62,12 +62,12 @@ void print_error(info_t *info, char *estr)
 */
 int print_d(int input, int fd)
 {
-	int (__putchar)(char) = _putchar;
+	int (*__putchar)(char) = _putchar;
 	int i, count = 0;
 	unsigned int abs, current;
 
 	if (fd == STDERR_FILENO)
-		__putchar = _eputchar; 
+		*__putchar = _eputchar; 
 	if (input < 0)
 	{
 		abs = -input;
@@ -118,7 +118,7 @@ char *convert_number(long int num, int base, int flags)
 		sign = '-';
 	}
 
-	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "012345
+	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "012345";
 		ptr = &buffer[49];
 	*ptr = '\0';
 
