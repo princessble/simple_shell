@@ -18,7 +18,7 @@ int _erratoi(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] >= '0'; && s[i] <= '9')
+		if (s[i] >= '0' && s[i] <= '9')
 		{
 			result *= 10;
 				result += (s[i] - '0');
