@@ -65,7 +65,11 @@ int print_d(int input, int fd)
 	unsigned int _abs_, current;
 
 	if (fd == STDERR_FILENO)
+<<<<<<< HEAD
 		__putchar = _eputchar;
+=======
+		*__putchar = *_eputchar; 
+>>>>>>> ea8d2b49f58725a113aa7773d6df12845556fd6a
 	if (input < 0)
 	{
 		_abs_ = -input;
