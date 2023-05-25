@@ -34,8 +34,8 @@ return (result);
  */
 void print_error(info_t *info, char *estr)
 {
-    _eputs(info->fname);
-    _eputs(": ");
+_eputs(info->fname);
+_eputs(": ");
 print_d(info->line_count, STDERR_FILENO);
 _eputs(": ");
 _eputs(info->argv[0]);
@@ -52,12 +52,12 @@ _eputs(estr);
  */
 int print_d(int input, int fd)
 {
-    int (*__putchar)(char) = _putchar;
-    int i, count = 0;
-    unsigned int _abs_, current;
+int (*__putchar)(char) = _putchar;
+int i, count = 0;
+unsigned int _abs_, current;
  if (fd == STDERR_FILENO)
  __putchar = _eputchar;
-    if (input < 0)
+ if (input < 0)
 {
  _abs_ = -input;
 __putchar('-');
@@ -91,29 +91,31 @@ return (count);
  */
 char *convert_number(long int num, int base, int flags)
 {
-    static char *array;
-    static char buffer[50];
-    char sign = 0;
-    char *ptr;
-    unsigned long n = num;
+static char *array;
+static char buffer[50];
+char sign = 0;
+char *ptr;
+unsigned long n = num;
 
-    if (!(flags & CONVERT_UNSIGNED) && num < 0)
-    {
-        n = -num;
-        sign = '-';
-    }
+if (!(flags & CONVERT_UNSIGNED) && num < 0)
+{
+n = -num;
+sign = '-';
+}
 
-    array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
-    ptr = &buffer[49];
-    *ptr = '\0';
+array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
+ptr = &buffer[49];
+*ptr = '\0';
 
-    do {
-        *--ptr = array[n % base];
-        n /= base;
-    } while (n != 0);
+ do 
+ {
+ *--ptr = array[n % base];
+ n /= base;
+ } 
+while (n != 0);
 
-    if (sign)
-        *--ptr = sign;
+if (sign)
+*--ptr = sign;
     return (ptr);
 }
 
@@ -124,14 +126,14 @@ char *convert_number(long int num, int base, int flags)
 
 void remove_comments(char *buf)
 {
-	int i;
+int i;
 
-	for (i = 0; buf[i] != '\0'; i++)
-	{
-		if (buf[i] == '#' && (!i || buf[i - 1] == ' '))
-		{
-			buf[i] = '\0';
-			break;
-		}
-	}
+for (i = 0; buf[i] != '\0'; i++)
+{
+if (buf[i] == '#' && (!i || buf[i - 1] == ' '))
+{
+buf[i] = '\0';
+break;
+}
+}
 }
