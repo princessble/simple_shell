@@ -1,11 +1,21 @@
 #include "shell.h"
 
 /**
+<<<<<<< HEAD
  * _erratoi - converts a string to an integer
  * @s: the string to be converted
  * Return: 0 if no numbers in string, converted number otherwise
  *       -1 on error
  */
+=======
+*_erratoi - converts a string to an integer
+*@s: the string to be converted
+*
+*Return: 0 if no numbers in string, converted number otherwise
+*	or -1 on error
+*/
+
+>>>>>>> 48d2cfca5aa87c9b847b03bffa65bbab9c5086b5
 int _erratoi(char *s)
 {
 	int i = 0;
@@ -19,13 +29,21 @@ int _erratoi(char *s)
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			result *= 10;
+<<<<<<< HEAD
 			result += (s[i] - '0');
+=======
+				result += (s[i] - '0');
+>>>>>>> 48d2cfca5aa87c9b847b03bffa65bbab9c5086b5
 			if (result > INT_MAX)
 				return (-1);
 		}
 		else
 			return (-1);
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 48d2cfca5aa87c9b847b03bffa65bbab9c5086b5
 	return (result);
 }
 
@@ -48,7 +66,11 @@ void print_error(info_t *info, char *estr)
 /**
  * print_d - function prints a decimal (integer) number (base 10)
  * @input: the input
+<<<<<<< HEAD
  * @fd: the file descriptor to write to
+=======
+ * @fd: the filedescriptor to write to
+>>>>>>> 48d2cfca5aa87c9b847b03bffa65bbab9c5086b5
  *
  * Return: number of characters printed
  */
@@ -59,7 +81,15 @@ int print_d(int input, int fd)
 	unsigned int _abs_, current;
 
 	if (fd == STDERR_FILENO)
+<<<<<<< HEAD
 		__putchar = _eputchar;
+=======
+<<<<<<< HEAD
+		__putchar = _eputchar;
+=======
+		*__putchar = *_eputchar; 
+>>>>>>> ea8d2b49f58725a113aa7773d6df12845556fd6a
+>>>>>>> 48d2cfca5aa87c9b847b03bffa65bbab9c5086b5
 	if (input < 0)
 	{
 		_abs_ = -input;
@@ -105,8 +135,14 @@ char *convert_number(long int num, int base, int flags)
 		n = -num;
 		sign = '-';
 	}
+<<<<<<< HEAD
 	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buffer[49];
+=======
+
+	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "012345";
+		ptr = &buffer[49];
+>>>>>>> 48d2cfca5aa87c9b847b03bffa65bbab9c5086b5
 	*ptr = '\0';
 
 	do {
