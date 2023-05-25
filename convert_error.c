@@ -67,15 +67,13 @@ int print_d(int input, int fd)
 		__putchar = _eputchar;
 
 		__putchar = _eputchar;
-
-		__putchar = _eputchar; 
-
+		__putchar = _eputchar;
 	if (input < 0)
-	{
+{
 		_abs_ = -input;
 		__putchar('-');
 		count++;
-	}
+}
 	else
 		_abs_ = input;
 	current = _abs_;
