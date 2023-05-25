@@ -63,10 +63,8 @@ int print_d(int input, int fd)
 
 	if (fd == STDERR_FILENO)
 		__putchar = _eputchar;
-<<<<<<< HEAD
+
 		__putchar = _eputchar;
-=======
->>>>>>> c2b854b9da785ec6cc126f0b713b85e5251d5d08
 	if (input < 0)
 {
 		_abs_ = -input;
