@@ -128,6 +128,7 @@ void _eputs(char *);
 int _eputchar(char);
 int _putfd(char c, int fd);
 int _putsfd(char *str, int fd);
+typedef int (*putchar_func_t)(char);  // typedef for function pointer type
 
 /* toem_strings.c */
 int _strlen(char *);
