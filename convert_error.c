@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * _erratoi - converts a string to an integer
- * @s: the string to be converted
- * Return: 0 if no numbers in string, converted number otherwise
+ * _erratoi - transforms a string to an integer
+ * @s: the string to be transformed
+ * Return: 0 if no numbers in string, transformed number otherwise
  *       -1 on error
  */
 int _erratoi(char *s)
@@ -29,7 +29,7 @@ int _erratoi(char *s)
 }
 
 /**
- * print_error - prints an error message
+ * print_error - displays an error message
  * @info: the parameter & return info struct
  * @estr: string containing specified error type
  * Return: 0 if no numbers in string, converted number otherwise
@@ -47,7 +47,7 @@ void print_error(info_t *info, char *estr)
 }
 
 /**
- * print_d - function prints a decimal (integer) number (base 10)
+ * print_d - function displays a decimal (integer) number (base 10)
  * @input: the input
  * @fd: the filedescriptor to write to
  *
